@@ -5,19 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="stylesheet.css">
-</head>
-<body>
     <script src="node_modules/jquery/dist/jquery.min.js">  </script>
     
-    <div class="weather">
-        <p class="cityName"></p>
-        <img class="icon">
-        <p class="style"></p>
-        <p class="temp"></p>
-    </div>
-    
-    
-    <script src="script.js"></script>
+</head>
+<body>
+        <form id="form" onsubmit="return false;">
+                <input type="text" id="userInput" />
+                <input type="submit" onclick="othername();"/>
+            </form>
+            <script src="homepage.js"></script>
 </body>
 </html>
