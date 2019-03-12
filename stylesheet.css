@@ -1,11 +1,11 @@
 .weather{
-    text-align: left;
-    background-color:gray ;
-    border-radius: 20%;
-    width: 80px;
-  height: 160px;
-  padding-left: 30px
+    text-align: center;
+  
+ 
+  
 }
+
+
 .temp{
     
     font-weight: bold;
@@ -20,6 +20,9 @@
 }
 .Days div{
     display: inline-grid;
-   
+   padding: 30px;
     
+}
+.wraper{
+    text-align: center;
 }
