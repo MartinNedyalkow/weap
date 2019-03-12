@@ -1,0 +1,23 @@
+
+
+
+.weather{
+    text-align: center
+}
+.temp{
+    
+    font-weight: bold;
+    
+}
+.cityName{
+    font-weight: bold}
+    .Row
+{
+    display: table;
+    
+}
+.Column
+{
+    display: table-cell;
+   
+}
