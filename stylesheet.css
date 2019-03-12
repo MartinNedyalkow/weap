@@ -1,5 +1,10 @@
 .weather{
-    text-align: center
+    text-align: left;
+    background-color:gray ;
+    border-radius: 20%;
+    width: 80px;
+  height: 160px;
+  padding-left: 30px
 }
 .temp{
     
@@ -7,4 +12,14 @@
     
 }
 .cityName{
-    font-weight: bold}
+    font-weight: bold
+}
+.Citys button{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    width: 15%;
+}
+.Days div{
+    display: inline-grid;
+   
+    
+}
