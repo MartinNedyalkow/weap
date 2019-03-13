@@ -14,9 +14,11 @@ $('.style').append(whetherName);
 $('.cityName').append(cityN);
 
 })
+
+
 $.getJSON("http://api.openweathermap.org/data/2.5/forecast?q="+ city + ",bg&appid=1e6d7c72e6293ab2397112f9121e9aec&units=metric",
 function(fiveday){
-console.log(fiveday);
+
 let icon1 = 'https://openweathermap.org/img/w/'+ fiveday.list[7].weather[0].icon + '.png';
 $('.icon1').attr('src',icon1);
 let temp1 = Math.floor(fiveday.list[7].main.temp);
@@ -27,4 +29,5 @@ $('.style1').append(whetherName1);
 $('.cityName1').append(cityN1);
 
 })
+
 
