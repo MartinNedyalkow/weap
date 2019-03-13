@@ -1,4 +1,34 @@
-
+const dayOfTheWeek=(data)=>{
+    switch(new Date(data).getDay()){
+        case 0:
+    day = "Sunday";
+    return day;
+    break;
+  case 1:
+    day = "Monday";
+    return day;
+    break;
+  case 2:
+     day = "Tuesday";
+     return day;
+    break;
+  case 3:
+    day = "Wednesday";
+    return day;
+    break;
+  case 4:
+    day = "Thursday";
+    return day;
+    break;
+  case 5:
+    day = "Friday";
+    return day;
+    break;
+  case 6:
+    day = "Saturday";
+    return day;
+    }
+    }
 
 
 
@@ -16,11 +46,19 @@ $(".text").html(`The weather in ${city} is`)
 }
 
 //Search Function 
-const fivedayfunk=()=>{
-    city=$('#search').val()
-$.getJSON("https://api.weatherbit.io/v2.0/forecast/daily?city="+city+"&days=5&key=8630e3dba62a4c27a06acdf0652d034b",
-function(data){
-    console.log(data)
-})}
 $("#SearchButton").on("click",funk)
-$("#SearchButton").on("click",fivedayfunk)
+
+const fillfunk=()=>{
+for (let i = 0; i < 5; i++) {
+    city=$('#search').val()
+    $.getJSON("https://api.weatherbit.io/v2.0/forecast/daily?city="+city+"&days=5&key=8630e3dba62a4c27a06acdf0652d034b",
+function(data){
+    $(`#Date-day-${i}`).empty().append(dayOfTheWeek(data.data[i].datetime));
+    let icon1 = 'https://www.weatherbit.io/static/img/icons/'+ data.data[i].weather.icon + '.png';
+    $(`#Icon-day-${i}`).attr('src',icon1);
+    $(`#Temp-day-${i}`).empty().append(data.data[i].temp);
+
+})}}
+$("#SearchButton").on("click",fillfunk)
+
+
